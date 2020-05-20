@@ -1,0 +1,9 @@
+- fsm_name: fsm_FF
+  default_state: state_WAN1
+  enable: false
+  status: ready
+- fsm_name: fsm_FFLB
+  default_state: state_WAN1
+  enable: true
+  status: ready
+

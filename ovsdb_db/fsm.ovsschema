@@ -1,0 +1,84 @@
+{
+    "name": "FSM",
+    "tables": {
+        "fsm_name_table": {
+            "columns": {
+                "fsm_name": {
+                    "type": "string" 
+                },
+                "default_state": {
+                    "type": "string" 
+                },
+                "enable": {
+                    "type": "boolean" 
+                },
+                "status": {
+                    "type": "string"
+                }
+            }
+        },
+        
+        "fsm_state_table": {
+            "columns": {
+                "fsm_name": {
+                    "type": "string" 
+                },
+                "state_name": {
+                    "type": "string" 
+                },
+                "state_config": {
+                    "type": "string" 
+                },
+                "on_state_config": {
+                    "type": "string" 
+                },
+                "off_state_config": {
+                    "type": "string" 
+                }
+            }
+        },
+        
+        "fsm_transition_table": {
+            "columns": {
+                "fsm_name": {
+                    "type": "string" 
+                },
+                "transition_name": {
+                    "type": "string" 
+                },
+                "start_state": {
+                    "type": "string" 
+                },
+                "end_state": {
+                    "type": "string" 
+                },
+                "transition_logic": {
+                    "type": "string" 
+                }
+            }
+        },
+
+        "fsm_monitor_table": {
+            "columns": {
+                "fsm_name": {
+                    "type": "string" 
+                },
+                "monitor_name": {
+                    "type": "string" 
+                },
+                "run_period": {
+                    "type": "integer" 
+                },
+                "snmp_mib": {
+                    "type": "string"
+                },
+                "desired_mib_value": {
+                    "type": "integer"
+                },
+                "upper_bound": {
+                    "type": "boolean"
+                }
+            }
+        }
+    }
+}

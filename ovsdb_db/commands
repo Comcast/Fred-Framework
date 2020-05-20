@@ -1,0 +1,11 @@
+ovsdb-tool create ./fsm.db ./fsm.ovsschema
+ovsdb-server --pidfile --detach --log-file --remote punix:/var/run/openvswitch/db.sock ./fsm.db
+ovs-appctl -t ovsdb-server ovsdb-server/add-remote ptcp:6640
+ovsdb-client dump  tcp:172.17.0.3:6640
+
+
+ovsdb-client transact  tcp:172.17.0.2:6640 '["FSM",{"op":"select", "table":"fsm_monitor_table", "where":[]}]'
+
+python update_ovsdb.py -q '["FSM",{"op":"update", "table":"fsm_monitor_table", "where":[["fsm_name", "==", "fsm_FF"],["monitor_name", "==", "monitor_WAN1"]], "row":{"desired_mib_value": 6} }]'
+
+sudo ovs-appctl -t ovsdb-server exit

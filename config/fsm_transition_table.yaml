@@ -1,0 +1,29 @@
+- fsm_name: fsm_FF
+  transition_name: WAN1_to_WAN2
+  start_state: state_WAN1
+  end_state: state_WAN2
+  transition_logic: monitor_WAN1
+
+- fsm_name: fsm_FF
+  transition_name: WAN2_to_WAN1
+  start_state: state_WAN2
+  end_state: state_WAN1
+  transition_logic: monitor_WAN2
+
+- fsm_name: fsm_FFLB
+  transition_name: WAN1_to_WAN2
+  start_state: state_WAN1
+  end_state: state_WAN2
+  transition_logic: monitor_WAN1
+
+- fsm_name: fsm_FFLB
+  transition_name: WAN2_to_WAN1
+  start_state: state_WAN2
+  end_state: state_WAN1
+  transition_logic: monitor_WAN2
+
+- fsm_name: fsm_FFLB
+  transition_name: 8020_to_WAN1
+  start_state: state_8020
+  end_state: state_WAN1
+  transition_logic: monitor_WAN1

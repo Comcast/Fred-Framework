@@ -1,0 +1,39 @@
+# run_period: Time interval to run health monitors
+# snmp_mib: The SNMP  MIB on the device to monitor
+# desired_mib_value: Expected value of the counters obtained from the device
+# upper_bound: True: desired value is maximum allowed || true: desired value is minimum allowed
+
+- fsm_name: fsm_FF
+  monitor_name: monitor_WAN1
+  run_period: 1
+  snmp_mib: 1.3.6.1.2.1.25.3.2.1.1.7
+  desired_mib_value: 7
+  upper_bound: true
+
+- fsm_name: fsm_FF
+  monitor_name: monitor_WAN2
+  run_period: 1
+  snmp_mib: 1.3.6.1.2.1.25.3.2.1.1.7
+  desired_mib_value: 7
+  upper_bound: true
+
+- fsm_name: fsm_FFLB
+  monitor_name: monitor_WAN1
+  run_period: 1
+  snmp_mib: 1.3.6.1.2.1.25.3.2.1.1.7
+  desired_mib_value: 6
+  upper_bound: true
+
+- fsm_name: fsm_FFLB
+  monitor_name: monitor_WAN2
+  run_period: 1
+  snmp_mib: 1.3.6.1.2.1.25.3.2.1.1.7
+  desired_mib_value: 7
+  upper_bound: true
+
+- fsm_name: fsm_FFLB
+  monitor_name: monitor_8020
+  run_period: 1
+  snmp_mib: 1.3.6.1.2.1.25.3.2.1.1.7
+  desired_mib_value: 7
+  upper_bound: true

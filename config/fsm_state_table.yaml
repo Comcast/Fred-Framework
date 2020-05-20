@@ -1,0 +1,23 @@
+- fsm_name: fsm_FF
+  state_name: state_WAN1
+  state_config: TODO RULES
+  on_state_config: TODO 
+  off_state_config: TODO
+
+- fsm_name: fsm_FF
+  state_name: state_WAN2
+  state_config: TODO RULES
+  on_state_config: TODO 
+  off_state_config: TODO
+
+- fsm_name: fsm_FFLB
+  state_name: state_WAN1
+  state_config: TODO RULES
+  on_state_config: TODO 
+  off_state_config: TODO
+
+- fsm_name: fsm_FFLB
+  state_name: state_WAN2
+  state_config: TODO RULES
+  on_state_config: TODO 
+  off_state_config: TODO
